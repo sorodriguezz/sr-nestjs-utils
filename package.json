@@ -1,6 +1,6 @@
 {
   "name": "sr-nestjs-utils",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "libreria de utilidades para nestjs",
   "main": "index.js",
   "scripts": {
