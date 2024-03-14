@@ -1,0 +1,1 @@
+export { filterObjectsByTarget } from './filter-object-by-target';
