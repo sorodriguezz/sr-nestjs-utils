@@ -13,3 +13,6 @@ export { getEnvOrDefault } from "./get-env-or-default";
 export { cleanString } from "./clean.string";
 export { generateSHA256 } from "./generate-sha256";
 export { isIntValid } from "./is-int-valid";
+export { removeDuplicates } from "./remove-duplicates";
+export { isValidJSON } from "./is-valid-json";
+export { clamp } from "./clamp";
