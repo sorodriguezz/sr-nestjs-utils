@@ -1,8 +1,10 @@
 /**
- * @description Búsqueda binaria para un arreglo de números donde se ingresa un objetivo a buscar
- * arrojando la posición donde esta el número encontrado. En caso que no exista en el arreglo
- * arrojará un -1.
+ * @description Búsqueda binaria para un arreglo de números.
  * @author sorodriguezz
+ *
+ * @param arr Arreglo de números.
+ * @param target Objetivo a encontrar.
+ * @returns Retorna -1 si no encontró el objetivo. Si lo encuentra retornará la posición.
  */
 export function binarySearchArrayNumbers(
   arr: number[],

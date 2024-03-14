@@ -1,6 +1,9 @@
 /**
- * @description Calcula el dígito verificador de un RUT Chileno, retornando el dígito.
+ * @description Calcula el dígito verificador de un RUT Chileno.
  * @author sorodriguezz
+ *
+ * @param rutWithoutDigit RUT sin digito verificador.
+ * @returns Retorna digito verificador para el RUT entregado.
  */
 export function computeCheckDigit(rutWithoutDigit: number): string {
   const rutReverse = rutWithoutDigit.toString().split('').reverse().join('');
