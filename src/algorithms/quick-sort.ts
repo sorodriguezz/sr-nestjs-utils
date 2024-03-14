@@ -11,7 +11,7 @@
  */
 export function quickSortObjects<T>(
   arr: T[],
-  key: string,
+  key: keyof T,
   order: "asc" | "desc",
   left: number = 0,
   right: number = arr.length - 1
@@ -36,7 +36,7 @@ export function quickSortObjects<T>(
  */
 export function partition<T>(
   arr: T[],
-  key: string,
+  key: keyof T,
   order: "asc" | "desc",
   left: number,
   right: number
