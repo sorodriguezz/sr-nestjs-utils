@@ -2,6 +2,9 @@
  * @description Genera una cadena aleatoria dependiendo el largo ingresado.
  * La cadena devuelve números, minúsculas y mayúsculas.
  * @author sorodriguezz
+ *
+ * @param length Largo de la cadena a generar
+ * @returns Cadena aleatoria.
  */
 export function generateRandomString(length: number): string {
   let result = "";

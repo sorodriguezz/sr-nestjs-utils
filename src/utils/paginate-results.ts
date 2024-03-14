@@ -6,6 +6,10 @@ export interface PaginationOptions {
 /**
  * @description Pagína un arreglo pasando el número de página a buscar y la cantidad de registros por página.
  * @author sorodriguezz
+ *
+ * @param options Describir página y cantidad de registros por página.
+ * @param results Arreglo a paginar.
+ * @returns Resultado paginado.
  */
 export function paginateResults<T>(
   options: PaginationOptions,
