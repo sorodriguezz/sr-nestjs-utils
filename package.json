@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build && cp package.json dist/",
+    "build": "npx nest build && cp package.json dist/",
     "prepublish": "npm run build"
   },
   "author": "sorodriguezz",
@@ -20,6 +20,7 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "@nestjs/cli": "^10.3.2",
     "@types/bcrypt": "^5.0.2",
     "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "^20.11.27",
