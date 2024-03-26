@@ -17,3 +17,4 @@ export { removeDuplicates } from "./remove-duplicates";
 export { isValidJSON } from "./is-valid-json";
 export { clamp } from "./clamp";
 export { transformObjectWithValidation } from "./transform-object-with-validation";
+export { decodeJwt } from "./decode-jwt";

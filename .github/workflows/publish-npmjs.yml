@@ -1,0 +1,42 @@
+name: Publicar en npm
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Obtener versión del paquete
+        run: echo "PACKAGE_VERSION=$(jq -r '.version' package.json)" >> $GITHUB_ENV
+
+      - name: Verificar versión en npm
+        id: check_version
+        run: |
+          if npm view nombre-de-tu-paquete@$PACKAGE_VERSION > /dev/null 2>&1; then
+            echo "::set-output name=exists::true"
+          else
+            echo "::set-output name=exists::false"
+          fi
+        env:
+          PACKAGE_VERSION: ${{ env.PACKAGE_VERSION }}
+
+      - name: Publicar en npm
+        if: steps.check_version.outputs.exists == 'false'
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
