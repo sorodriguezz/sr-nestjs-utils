@@ -27,7 +27,7 @@ jobs:
       - name: Verificar versión en npm
         id: check_version
         run: |
-          if npm view nombre-de-tu-paquete@$PACKAGE_VERSION > /dev/null 2>&1; then
+          if npm view sr-nestjs-utils@$PACKAGE_VERSION > /dev/null 2>&1; then
             echo "exists=true" >> $GITHUB_OUTPUT
           else
             echo "exists=false" >> $GITHUB_OUTPUT
